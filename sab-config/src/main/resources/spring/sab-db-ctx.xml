@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                            http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+							http://www.springframework.org/schema/context 
+                            http://www.springframework.org/schema/context/spring-context-3.1.xsd
+                            http://www.springframework.org/schema/data/mongo
+                            http://www.springframework.org/schema/data/mongo/spring-mongo-1.1.xsd">
+
+  
+    <bean id="hibernateProperties"
+    class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+        <property name="properties">
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</prop>
+                <prop key="hibernate.default_batch_fetch_size">16</prop>
+                <prop key="hibernate.connection.release_mode">after_transaction</prop>
+                <prop key="hibernate.show_sql">${jdbc.debug_query}</prop>
+                <prop key="hibernate.hbm2ddl.auto">none</prop>
+            </props>
+        </property>
+    </bean>
+ 
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+          destroy-method="close">
+        <property name="driverClass" value="${jdbc.driverClassName}"/>
+        <property name="jdbcUrl" value="${jdbc.url}${db.name}"/>
+        <property name="user" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+        <property name="minPoolSize" value='5'/>
+        <property name="maxPoolSize" value='30'/>
+
+        <!-- The number of milliseconds a client calling getConnection() will wait
+        for a Connection to be checked-in or acquired when the pool is
+        exhausted. Zero means wait indefinitely. Setting any positive value
+        will cause the getConnection() call to time-out and break with an
+        SQLException after the specified number of milliseconds. -->
+        <property name="checkoutTimeout" value='10000'/>
+
+        <!-- Determines how many connections at a time c3p0 will try to acquire
+        when the pool is exhausted -->
+        <property name="acquireIncrement" value='3'/>
+
+        <!-- The number of seconds between each test of all idle, pooled but
+        unchecked-out connections. Set to 1 minute here. A broken connection
+        will not be kept in the pool for longer than a minute. -->
+        <property name="idleConnectionTestPeriod" value='60'/>
+
+        <!-- Defines the query that will be executed for all connection tests. The
+        following value only works in mysql.
+        For oracle use 'select 1 from dual'. -->
+        <property name="preferredTestQuery" value='select 1 from dual;'/>
+
+        <!-- Specify the maximum number of seconds to keep an idle connection
+        (in this case, 7 hours). For mysql, it should be lower that the
+        wait_timeout mysqld option. wait_timeout is 8 hours by default. -->
+        <property name="maxIdleTime" value='25200'/>
+
+        <!-- Maximum Number of prepared statements that will be cached. Disabled
+        here. -->
+        <property name="maxStatements" value='0'/>
+
+        <!-- Convenient but expensive. -->
+        <!-- property name="testConnectionOnCheckout" value='true'/-->
+
+        <!-- For debugging purposes only. Very expensive. -->
+        <!--property name='debugUnreturnedConnectionStackTraces' value='true'/ -->
+
+    </bean>  
+ 
+</beans>
+
+

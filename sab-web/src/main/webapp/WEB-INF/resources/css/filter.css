@@ -1,0 +1,13 @@
+.dashboard-filter {
+    padding: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+}
+.dashboard-filter h4 {
+    margin-bottom: 8px;
+    border-bottom: 1px solid #bbb;
+    padding-bottom: 3px;
+}
+.dashboard-filter select {
+    width: 100%;
+}

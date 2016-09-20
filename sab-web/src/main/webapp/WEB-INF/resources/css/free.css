@@ -1,0 +1,21 @@
+.dashboard-free-container {
+    border-radius: 5px;
+	background-color: rgba(128, 128, 128, 0.15);
+}
+.dashboard-free-widget {
+	background-color: #f9f9f9;
+	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #fff;
+	border-right: 1px solid #ddd;
+	border-left: 1px solid #ddd;
+	border-radius: 5px;
+    margin-bottom: 5px;
+    box-shadow: 0 1px 4px -2px #666;
+    -o-transition: box-shadow 0.3s linear;
+    -moz-transition: box-shadow 0.3s linear;
+    -webkit-transition: box-shadow 0.3s linear;
+    -ms-transition: box-shadow 0.3s linear;
+}
+.dashboard-free-widget.ui-draggable-dragging {
+    box-shadow: 0 1px 16px -2px #666;
+}

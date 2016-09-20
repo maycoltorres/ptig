@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+
+
+	<!-- The following bean will load properties from the given location files 
+		to easily override Application's configurations like database connections. -->
+	<bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:/sab.properties</value>
+				<value>classpath:/messages.properties</value>
+				<value>classpath:/swagger.properties</value>
+			</list>
+		</property>
+	</bean>
+
+	<import resource="classpath:spring/sab-db-ctx.xml" />
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<!-- org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean -->
+
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+
+		<property name="hibernateProperties">
+			<ref bean="hibernateProperties" />
+		</property>
+
+		<property name="annotatedClasses">
+			<list>
+				<value>com.gamasoft.hps.sab.domain.User</value>
+				<value>com.gamasoft.hps.sab.domain.Punto</value>
+				<value>com.gamasoft.hps.sab.domain.Rol</value>
+				<value>com.gamasoft.hps.sab.domain.Cliente</value>
+				<value>com.gamasoft.hps.sab.domain.Pais</value>
+				<value>com.gamasoft.hps.sab.domain.Departamento</value>
+				<value>com.gamasoft.hps.sab.domain.Municipio</value>
+				<value>com.gamasoft.hps.sab.domain.Marca</value>
+				<value>com.gamasoft.hps.sab.domain.Grupo</value>
+				<value>com.gamasoft.hps.sab.domain.GrupoArticulo</value>
+				<value>com.gamasoft.hps.sab.domain.ClaseArticulo</value>
+				<value>com.gamasoft.hps.sab.domain.Transaccion</value>
+				<value>com.gamasoft.hps.sab.domain.RolCliente</value>
+				<value>com.gamasoft.hps.sab.domain.Articulo</value>
+				<value>com.gamasoft.hps.sab.domain.Inventario</value>
+				<value>com.gamasoft.hps.sab.domain.Unidad</value>
+				<value>com.gamasoft.hps.sab.domain.Conversion</value>
+				<value>com.gamasoft.hps.sab.domain.Venta</value>
+				<value>com.gamasoft.hps.sab.domain.Receta</value>
+				<value>com.gamasoft.hps.sab.domain.ConfiguracionArticulos</value>
+				<value>com.gamasoft.hps.sab.domain.Canal</value>
+				<value>com.gamasoft.hps.sab.domain.Impuesto</value>
+				<value>com.gamasoft.hps.sab.domain.MaximosMinimos</value>
+				<value>com.gamasoft.hps.sab.domain.Tarifa</value>
+				<value>com.gamasoft.hps.sab.domain.Regimen</value>
+				<value>com.gamasoft.hps.sab.domain.GrupoSeleccion</value>
+				<value>com.gamasoft.hps.sab.domain.Seleccion</value>
+				<value>com.gamasoft.hps.sab.domain.Bodega</value>
+				<value>com.gamasoft.hps.sab.domain.CanalImpuesto</value>
+				<value>com.gamasoft.hps.sab.domain.Cat</value>
+				<value>com.gamasoft.hps.sab.domain.ListaPrecios</value>
+				<value>com.gamasoft.hps.sab.domain.Ingrediente</value>
+				<value>com.gamasoft.hps.sab.domain.UnidadVenta</value>
+				<value>com.gamasoft.hps.sab.domain.GrupoEmpaque</value>
+				<value>com.gamasoft.hps.sab.domain.Empaque</value>
+				<value>com.gamasoft.hps.sab.domain.ConfiguracionCliente</value>
+				<value>com.gamasoft.hps.sab.domain.VentaCanalImpuesto</value>
+				<value>com.gamasoft.hps.sab.domain.VentaGrupoSeleccion</value>
+			</list>
+		</property>
+
+	</bean>
+	
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<tx:annotation-driven/>
+	
+	<import resource="classpath:spring/sab-dao-ctx.xml" />
+	<import resource="classpath:spring/sab-service-ctx.xml" />
+
+</beans>
+

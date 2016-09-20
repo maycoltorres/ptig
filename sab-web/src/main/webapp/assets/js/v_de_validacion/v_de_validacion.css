@@ -1,0 +1,48 @@
+.campo_mal{
+    border: solid #C50202 1px!important;
+}
+/*
+.valido{
+    vertical-align:sub;
+    margin-left: 5px;
+    height:20px;
+    width:20px;
+    /*background-image:url("../images/check.png");
+    display: inline-block;
+}
+*/
+/*
+.no_valido{
+     vertical-align:sub;
+    margin-left: 5px;
+    height:20px;
+    width:20px;
+    background-image:url("../images/close.png");
+    display: inline-block;
+    margin-right: 25px;
+}
+*/
+.validado{
+    border:solid green 1px!important;
+}
+
+.en_edicion{
+    border:solid blue 1px!important;
+}
+
+.informacion{
+	vertical-align:sub;
+	margin-left:5px;
+	position:relative;
+	z-index:2;
+}
+
+.informacion_globo{
+	position:absolute;
+}
+
+.mensaje_de_error{
+	color:#C50202;
+	display:block;
+}
+

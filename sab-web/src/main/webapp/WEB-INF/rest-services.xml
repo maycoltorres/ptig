@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:oxm="http://www.springframework.org/schema/oxm"
+		xmlns:util="http://www.springframework.org/schema/util"
+		xmlns:mvc="http://www.springframework.org/schema/mvc"
+		xmlns:context="http://www.springframework.org/schema/context"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+							http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd
+							http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
+							http://www.springframework.org/schema/oxm
+							http://www.springframework.org/schema/oxm/spring-oxm-3.1.xsd
+							http://www.springframework.org/schema/util
+  							http://www.springframework.org/schema/util/spring-util-3.1.xsd">
+
+
+    <import resource="classpath*:spring/sab-main-ctx.xml"/>
+	<!--
+		 Enables automatic mapping of fund objects to and from JSON
+	-->
+	<mvc:annotation-driven/>
+    <!--mvc:resources mapping="/resources/**" location="/WEB-INF/" /-->
+	<!--
+		 Setup spring to pull in @Controller, @RequestMapping, etc Configuration scans specified packages
+		 for classes configured as Spring managed beans and automatically sets up objects annotated with
+		 @Controller, @Service etc.
+	-->
+    <context:component-scan base-package="com.gamasoft.hps.sab.webservices.rest" />
+	<context:component-scan base-package="com.gamasoft.hps.sab.web" />
+
+	<!--
+		 TODO
+	-->
+	<bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping" />
+
+    <!-- JSP pages view resolver -->
+    <bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix">
+			<value>/WEB-INF/pages/</value>
+		</property>
+		<property name="suffix">
+			<value>.jsp</value>
+		</property>
+        <property name="order" value="0"/>
+	</bean>
+    
+	<!--
+		 Configures view for returning JSON to the client
+	-->
+    <bean class="org.springframework.web.servlet.view.json.MappingJacksonJsonView">
+		<property name="contentType" value="text/plain"/>
+    </bean>
+
+	<!--
+		 TODO
+	-->
+	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+		<property name="messageConverters">
+			<util:list id="beanList">
+				<ref bean="jsonMessageConverter"/>
+			</util:list>
+		</property>
+	</bean>
+
+	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerExceptionResolver">
+		<property name="messageConverters">
+			<util:list id="beanList">
+				<ref bean="jsonMessageConverter"/>
+			</util:list>
+		</property>
+	</bean>
+
+	<!--
+		 Converts JSON to POJO and vice versa
+	-->
+	<bean id="jsonMessageConverter" class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter"/>
+
+
+	<bean id="passwordEncoder" class="org.springframework.security.authentication.encoding.ShaPasswordEncoder">
+        <constructor-arg value="512" />
+    </bean>
+    
+    <!-- the path where the swagger.properties file can be found
+	<context:property-placeholder location="classpath:swagger.properties"/>-->
+ 
+    <!-- creates a controller at /api-docs from this uri, which serves swagger's raw documentation in JSON format. -->
+    <bean id="documentationConfig" class="com.mangofactory.swagger.configuration.DocumentationConfig"/>
+    
+</beans>

@@ -1,0 +1,18 @@
+/* Table Enhancements */
+table {
+	font-size: 13px;
+	margin-top: 18px;
+	background-color: #f0f0f0;
+}
+.table th, .table td {
+	vertical-align: middle;
+}
+.table tbody tr td:last-child button {
+	opacity: 0;
+}
+
+/* Modal styling */
+.modal {
+	width: 240px;
+	margin-left: -120px;
+}

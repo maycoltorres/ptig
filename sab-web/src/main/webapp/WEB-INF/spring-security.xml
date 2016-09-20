@@ -1,0 +1,54 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+             xmlns:beans="http://www.springframework.org/schema/beans" 
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:sec="http://www.springframework.org/schema/security"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+	http://www.springframework.org/schema/security
+	http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+
+
+	<sec:http pattern="/*" use-expressions="true">
+        <sec:intercept-url pattern="/main*" access="isAuthenticated()" />
+        <sec:form-login login-page="/login" default-target-url="/main"
+                    authentication-failure-url="/loginfailed" />
+        <sec:logout logout-success-url="/logout" />
+    </sec:http>
+    
+    
+	<sec:http entry-point-ref="restAuthenticationEntryPoint" access-decision-manager-ref="accessDecisionManager">
+		<sec:intercept-url pattern="/rest/**" access="ROLE_USER" />
+	     
+        <form-login
+         authentication-success-handler-ref="mySuccessHandler"
+         authentication-failure-handler-ref="myFailureHandler"
+      	/>
+    </sec:http>
+	 
+    
+    <sec:authentication-manager>
+        <sec:authentication-provider user-service-ref="customUserDetailsService">
+            <sec:password-encoder ref="passwordEncoder"/>
+        </sec:authentication-provider>
+    </sec:authentication-manager>
+
+    <beans:bean id="passwordEncoder" class="org.springframework.security.authentication.encoding.ShaPasswordEncoder">
+        <beans:constructor-arg value="512" />
+    </beans:bean>
+    
+     <beans:bean id="accessDecisionManager" class="org.springframework.security.access.vote.UnanimousBased">
+		<beans:property name="decisionVoters">
+			<beans:list>
+				<beans:ref bean="customVoter"/>
+			</beans:list>
+		</beans:property>
+		<beans:property name="allowIfAllAbstainDecisions" value="false" />
+	</beans:bean>
+		
+	<beans:bean id="customVoter" class="com.gamasoft.hps.sab.web.RoleAccessVoter"/>
+	<beans:bean id="restAuthenticationEntryPoint" class="com.gamasoft.hps.sab.web.RestAuthenticationEntryPoint"/>
+    
+    <beans:bean id="mySuccessHandler" class="com.gamasoft.hps.sab.web.MySavedRequestAwareAuthenticationSuccessHandler"/>
+   	<beans:bean id="myFailureHandler" class="org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler"/>
+
+</beans:beans>

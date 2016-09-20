@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<!-- The following bean will load properties from the given location files 
+		to easily override Application's configurations like database connections. -->
+	<bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:/sab.properties</value>
+				<value>classpath:/messages.properties</value>
+			</list>
+		</property>
+	</bean>
+
+	<import resource="classpath:spring/sab-db-ctx.xml" />
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<!-- org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean -->
+
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+
+		<property name="hibernateProperties">
+			<ref bean="hibernateProperties" />
+		</property>
+
+		<property name="annotatedClasses">
+			<list>
+				<value>com.gamasoft.hps.sab.domain.User</value>
+				<value>com.gamasoft.hps.sab.domain.punto</value>
+				<value>com.gamasoft.hps.sab.domain.Role</value>
+				<value>com.gamasoft.hps.sab.domain.Grupo</value>
+			</list>
+		</property>
+
+	</bean>
+
+	<import resource="classpath:spring/sab-dao-ctx.xml" />
+	<import resource="classpath:spring/sab-service-ctx.xml" />
+    
+    <!--<bean id="eaDataSource" class="com.gamasoft.hps.sab.report.datasource.hibernate.HibernateDatasource">
+        <property name="dataSource" ref="dataSourceEa" />
+    </bean>-->
+    
+</beans>

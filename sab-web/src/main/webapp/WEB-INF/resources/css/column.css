@@ -1,0 +1,21 @@
+.dashboard-column {
+    border-radius: 5px;
+	background-color: rgba(128, 128, 128, 0.15);
+}
+.dashboard-column-highlight {
+	background-color: rgba(64, 190, 94, 0.25);
+}
+.dashboard-column-widget {
+	background-color: #f9f9f9;
+	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #fff;
+	border-right: 1px solid #ddd;
+	border-left: 1px solid #ddd;
+	border-radius: 5px;
+    margin-bottom: 5px;
+}
+.dashboard-column-widget-placeholder {
+	background-color: rgba(64, 190, 94, 0.25);
+	border-radius: 5px;
+    margin-bottom: 5px;
+}

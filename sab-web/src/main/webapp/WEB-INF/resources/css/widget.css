@@ -1,0 +1,66 @@
+.dashboard-widget-header {
+    padding: 10px;
+    text-shadow: 0 1px 0 #fff;
+    cursor: move;
+}
+.dashboard-widget-header h1 {
+    font-size: 18px;
+    line-height: 21px;
+}
+.dashboard-widget-header h2 {
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 15px;
+    margin-bottom: 0;
+}
+.dashboard-widget-actions {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.dashboard-widget-actions a {
+    width: 14px;
+    height: 14px;
+    display: block;
+    float: right;
+    padding: 2px;
+    margin-left: 2px;
+    border-radius: 3px;
+}
+.dashboard-widget-actions a:hover {
+    background-color: rgba(128, 128, 128, 0.2);
+}
+.dashboard-widget-actions a.active, .dashboard-widget-actions a.active:hover {
+    background-color: #333;
+}
+.dashboard-widget-raw {
+
+}
+.dashboard-widget-raw table {
+    width: 98%;
+    margin: 1%;
+    font-size: 12px;
+}
+.dashboard-widget-raw th {
+    font-size: 15px;
+    text-align: center;
+    vertical-align: middle;
+}
+/* first column bg color */
+.dashboard-widget-raw thead tr:first-child th:first-child, .dashboard-widget-raw tbody td:first-child {
+    background-color: #f0f0f0;
+    vertical-align: middle;
+}
+/* second row for table header: series names */
+.dashboard-widget-raw thead tr:nth-child(2) th {
+    font-size: 14px;
+    font-weight: normal;
+    background-color: #fff;
+}
+/* fixes some border lines */
+.dashboard-widget-raw thead.multiSeriesHead tr:first-child th:nth-child(2) {
+    border-bottom: 1px solid #ddd;
+}
+.dashboard-widget-raw thead.multiSeriesHead tr:nth-child(2) th:first-child {
+    border-left: 1px solid #ddd;
+}

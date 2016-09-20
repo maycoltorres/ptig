@@ -1,0 +1,87 @@
+﻿@media (max-height:360px){
+    body{
+        overflow:auto!important;
+    }
+}
+
+@media (max-height:500px){
+    #login{
+        top: 0;
+        margin-top: 100px;
+        margin-bottom: 10px;
+    }
+}
+
+
+@media (max-width:480px){
+    .btn-group-vertical a.tipR{
+        width:100px!important;
+    }
+
+    #login #bar {
+        right: -1px;
+        top: -35px;
+    }
+}
+
+@media (min-width: 481px) and (max-width:680px){
+    .btn-group-vertical a.tipR:first-child {
+        border-left: 1px solid #c9c9c9!important;
+    }
+
+    .btn-group-vertical a.tipR{
+        border-left: 1px solid #c9c9c9;
+        border-bottom: 1px solid transparent;
+        width:100px!important;
+    }
+
+    .btn-group-vertical a.tipR:last-child{
+        border-left: none;
+    }
+
+    #login #bar {
+        right: -1px;
+        top: -35px;
+    }
+
+
+}
+
+@media (max-width:680px){
+    #gama_div{
+        font-size: 65px!important;
+    }
+}
+
+@media (min-width:681px){
+    .btn-group-vertical a.tipR{
+        padding-top:25px;
+        padding-bottom:25px;
+    }
+}
+
+body{
+    overflow: hidden;
+}
+
+#gama_div{
+    width: 100%;
+    line-height: 150px;
+    margin-top: -150px;
+    font-size: 100px;
+    text-align: center;
+}
+
+.btn-group .btn i {
+    margin-left: 1px;
+}
+
+.btn_fix{
+    margin-right: -15px;
+}
+
+.alert-error.alert-danger {
+    margin-top: 15px;
+}
+
+
