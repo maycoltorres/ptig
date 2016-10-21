@@ -29,7 +29,7 @@
                                 <td>{{post.nit}}</td>
                                 <td>{{post.telefono}}</td>
                                 <td>{{post.nombreRepresentante}}</td>
-                                <td><input type="checkbox"></td>
+                                <td><input type="checkbox"id="asociar{{post.nombre}}" name="asociar{{post.nombre}}" ng-model="formData.asociar[post.nombre]"></td>
                             </tr>
 
                         </tbody>

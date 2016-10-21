@@ -93,14 +93,12 @@
                                     <td>{{post.nit}}</td>
                                     <td>{{post.telefono}}</td>
                                     <td>{{post.nombreRepresentante}}</td>
-                                    <td><input type="checkbox" name="asociar" value="asociar" ng-model="formData.asociar"></td>
+                                    <td><input type="checkbox" id="asociar{{post.nombre}}" name="asociar{{post.nombre}}" ng-model="formData.asociar[post.nombre]"></td>
                                 </tr>
 
                             </tbody>
                         </table>
-                        <div ng-controller="PaginationDemoCtrl">
-                            <ul uib-pagination boundary-links="true" total-items="totalItems" ng-model="currentPage" class="pagination-sm" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></ul>
-                        </div>
+   
                     </div>
 
                 </div>
