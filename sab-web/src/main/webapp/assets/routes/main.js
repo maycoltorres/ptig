@@ -33,12 +33,6 @@ angularRoutingApp.config(function ($stateProvider, $urlRouterProvider) {
                 controller: 'buscarclienteController'
             })
 
-            .state('activarcliente', {
-                url: '/activarcliente/:id',
-                templateUrl: 'assets/pages/activarcliente.html',
-                controller: 'activarclienteController'
-            })
-
             .state('crearclientes', {
                 url: '/crearclientes',
                 templateUrl: 'assets/pages/crearclientes.html',

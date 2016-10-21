@@ -108,23 +108,6 @@ angularRoutingApp.controller('listaclientesinactivosController', function ($scop
 });
 
 
-angularRoutingApp.controller('activarclienteController', function ($scope, $http, $stateParams) {
-
-    $scope.posts = [];
-    $http.put("./rest/cliente/activar/"+$stateParams.id)
-            .success(function (data) {
-
-                console.log(data);
-                $scope.posts = data;
-                alert("******************creo que lo activó*************************** ");
-            })
-            .error(function (err) {
-
-                alert("Ha fallado la petición HTTP " + err);
-            });
-    
-
-});
 
 //****************************Fin Controladores para procesar información de Clientes*******************************************************
 
@@ -378,9 +361,6 @@ angularRoutingApp.controller('articulosController', function ($scope, $http) {
             });
 });
 
-angularRoutingApp.controller('creararticuloController', function ($scope, $http) {
-    $scope.message = 'Esta es la pagina de creararticuloController';
-});
 
 angularRoutingApp.controller('listaarticulosinactivosController', function ($scope, $http) {
     $scope.posts = [];
