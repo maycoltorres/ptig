@@ -1,0 +1,108 @@
+
+
+<div class="container-fluid">
+    <ol class="breadcrumb">
+        <li class="active">
+            <i class="center"></i> <h3>Informacion del Cliente</h3>
+        </li>
+    </ol>
+
+    <div class="form-group">
+        <label for="nombre">Razón Social</label>
+        <input type="text" class="form-control" name="nombre" ng-model="formData.nombre">
+    </div>
+
+    <div class="form-group">
+        <label for="nit">Nit</label>
+        <input type="text" class="form-control" name="nit" ng-model="formData.nit">
+    </div>
+    <div class="form-group">
+        <label for="digitoChequeo">Dígito de Chequeo</label>
+        <input type="text" class="form-control" name="digitoChequeo" ng-model="formData.digitoChequeo">
+    </div>
+
+    <div class="form-group">
+        <label for="telefono">Teléfono</label>
+        <input type="text" class="form-control" name="telefono" ng-model="formData.telefono">
+    </div>
+    <div class="form-group">
+        <label for="extension">Extensión</label>
+        <input type="text" class="form-control" name="extension" ng-model="formData.extension">
+    </div>
+
+    <div class="form-group">
+        <label for="celular">Celular</label>
+        <input type="text" class="form-control" name="celular" ng-model="formData.celular">
+    </div>
+    <div class="form-group">
+        <label for="email">Correo</label>
+        <input type="text" class="form-control" name="email" ng-model="formData.email">
+    </div>
+
+    <div class="form-group">
+        <label for="direccion">Dirección</label>
+        <input type="text" class="form-control" name="direccion" ng-model="formData.direccion">
+    </div>
+    <div class="form-group">
+        <label for="nombreDueno">Propietario</label>
+        <input type="text" class="form-control" name="nombreDueno" ng-model="formData.nombreDueno">
+    </div>
+
+    <div class="form-group">
+        <label for="mailDueno">Correo del Propietario</label>
+        <input type="text" class="form-control" name="mailDueno" ng-model="formData.mailDueno">
+    </div>
+    <div class="form-group">
+        <label for="celularDueno">Telefono del Propietario</label>
+        <input type="text" class="form-control" name="celularDueno" ng-model="formData.celularDueno">
+    </div>
+
+    <div class="form-group">
+        <label for="nombreRepresentante">Nombre del Representante Legal</label>
+        <input type="text" class="form-control" name="nombreRepresentante" ng-model="formData.nombreRepresentante">
+    </div>
+    <div class="form-group">
+        <label for="name">Documento del Representante</label>
+        <input type="documentoRepresentante" class="form-control" name="documentoRepresentante" ng-model="formData.documentoRepresentante">
+    </div>
+
+    <div class="form-group">
+        <label for="pais">País</label>
+        <select class="charge_select form-control ui-wizard-content" name="pais" ng-model="formData.pais">
+            <option>Argentina</option>
+            <option>Brazil</option>
+            <option>Colombia</option>
+            <option>Peru</option>
+            <option>Venezuela</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="departamento">Departamento</label>
+        <select class="charge_select form-control ui-wizard-content" name="departamento" ng-model="formData.departamento">
+            <option>Argentina</option>
+            <option>Brazil</option>
+            <option>Colombia</option>
+            <option>Peru</option>
+            <option>Venezuela</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="municipio">Municipio</label>
+        <select class="charge_select form-control ui-wizard-content" name="municipio" ng-model="formData.municipio">
+            <option>Argentina</option>
+            <option>Brazil</option>
+            <option>Colombia</option>
+            <option>Peru</option>
+            <option>Venezuela</option>
+        </select>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-xs-3">
+            <a ui-sref="crearclientes.ajustescliente" class="btn btn-block btn-info">
+                Siguiente <span class="glyphicon glyphicon-circle-arrow-right"></span>
+            </a>
+        </div>
+    </div>
+</div>

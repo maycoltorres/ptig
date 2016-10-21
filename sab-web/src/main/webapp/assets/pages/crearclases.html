@@ -1,0 +1,135 @@
+
+
+
+
+
+
+<div id="page-wrapper">
+
+    <div class="container-fluid">
+
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    Clases <small>Resumen de Estadísticas</small>
+                </h1>
+
+            </div>
+        
+
+
+       
+            <div class="col-lg-3 col-md-6">
+                <div class="panel panel-green">
+                    <a href="#/clases">
+                        <div class="panel-footer">
+                            <span class="pull-left">Listado de Clases Activas</span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="panel panel-red">                         
+                    <a href="#/listarclasesinactivas">
+                        <div class="panel-footer">
+                            <span class="pull-left">Listado de Clases Inactivas</span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+    </div>
+        <!-- /.row -->
+<div class="row">
+        <ol class="breadcrumb">
+            <li class="active">
+                <i class="fa fa-user"></i> Crear Nueva Clase 
+            </li>
+        </ol>
+
+        <ol class="breadcrumb">
+            <li class="active">
+                <i class="center"></i> <h3>Información de la Clase</h3>
+            </li>
+        </ol>
+
+      
+
+    <form ng-submit="processFormClases()">
+
+                <div class="form-group">
+
+                    <label for="input" class="control-label col-lg-2">Nombre de la Clase:</label>
+                    <div class="col-lg-10">
+                        <input type="text" class="form-control" ng-model="formData.nombreclase" placeholder="Nombre">
+                    </div>
+
+                </div>
+       
+
+
+
+        <ol class="breadcrumb">
+            <li class="active">
+                <i class="center"></i> <h3>Caracteristicas de la Clase</h3>
+                            
+            </li>
+        </ol>	
+
+       <div class="col-lg-12">
+
+                        <div class="panel-body">
+                            <table  width="100%" class="table table-striped table-hover" id="dataTables-example">
+
+                                <tbody>
+                                    <tr class="odd gradeX">
+                                        <td>Usada para la Venta</td>
+                                        <td><input type="checkbox" name="unidadventa" value="unidadventa" ng-model="formData.unidadventa"></td>
+                                    </tr>
+                                    <tr class="odd gradeX">
+                                        <td>Usada para Inventario</td>
+                                        <td><input type="checkbox" name="usadainventario" value="usadainventario" ng-model="formData.usadainventario" ></td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <ol class="breadcrumb">
+                        <li class="active">
+                            <i class=""></i> <h3>Grupos a los que sera Asignada la Clase </h3>
+                        </li>
+                    </ol>			
+                    <label for="nombregrupo" class="control-label col-lg-2">Nombre del Grupo:</label>
+                    <div class="col-lg-10">
+                        <input type="text" class="form-control" name="nombregrupo" ng-model="formData.nombregrupo" placeholder="Nombre">
+                    </div>
+            
+
+               
+        <br>
+        <div class="col-xs-3">
+
+            <button type="submit" class="btn btn-block btn-success">Guardar Clase</button>
+        </div>
+        </form>
+
+  </div>
+
+
+
+</div>
+</div>
+
+
+

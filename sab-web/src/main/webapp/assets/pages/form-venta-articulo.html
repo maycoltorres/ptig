@@ -1,0 +1,154 @@
+
+
+<div class="container-fluid">
+    <ol class="breadcrumb">
+        <li class="active">
+            <i class="center"></i> <h3>Venta</h3>
+        </li>
+    </ol>
+    <div class="form-group">
+        <label for="email">Clase</label>
+        <select class="charge_select form-control ui-wizard-content" name="clase" ng-model="formData.clase">
+            <option>Clase 1</option>
+            <option>Clase 2</option>
+            <option>Clase 3</option>
+            <option>Clase 4</option>
+            <option>Clase 5</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="email">Bodegas</label>
+        <select class="charge_select form-control ui-wizard-content" name="bodegas" ng-model="formData.bodegas">
+            <option>Bodegas 1</option>
+            <option>Bodegas 2</option>
+            <option>Bodegas 3</option>
+            <option>Bodegas 4</option>
+            <option>Bodegas 5</option>
+        </select>
+    </div>
+    <ol class="breadcrumb">
+        <li class="active">
+            <i class="center"></i> <h3>Asigne el Articulo a un Canal y defina el Impuesto y Tarifa</h3>        
+        </li>
+    </ol>
+    <div class="form-group">
+        <label>
+            <input type="checkbox" ng-model="formData.maxmin" value="check1">        
+        </label>
+        Impuesto aplica para todos los canales
+    </div>
+    <div class="form-group">
+        <label>
+            <input type="checkbox" ng-model="formData.maxmin" value="check1">        
+        </label>
+        La tarifa aplica para todos los canales
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+
+            <div class="panel-body">
+                <table width="100%" class="table table-striped table-hover" id="dataTables-example">
+                    <thead>
+                        <tr>
+                            <th>Canal</th>
+                            <th>Impuesto</th>
+                            <th>Regimen</th>
+                            <th>Tarifa</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="odd gradeX">
+                            <td>Para llevar</td>
+                            <td>select para llevar</td>
+                            <td>se auto genera segun el select impuesto</td>
+                            <td>select para llevar</td>
+                        </tr>
+                        <tr class="odd gradeX">
+                            <td>Domicilio</td>
+                            <td>select domicilio</td>
+                            <td>se auto genera segun el select impuesto</td>
+                            <td>select domicilio</td>
+                        </tr>
+                        <tr class="odd gradeX">
+                            <td>Autoservicio</td>
+                            <td>select Autoservicio</td>
+                            <td>se auto genera segun el select impuesto</td>
+                            <td>Autoservicio</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <ol class="breadcrumb">
+        <li class="active">
+            <i class="center"></i> <h3>Unidad Principal</h3>
+        </li>
+    </ol>
+    <div class="form-group">
+        <label for="unidadventa">Unidad de Venta</label>
+        <select id="unidadventa" class="charge_select form-control ui-wizard-content" name="unidadventa" ng-model="formData.unidadventa">
+            <option>Unidad de Venta 1</option>
+            <option>Unidad de Venta 2</option>
+            <option>Unidad de Venta 3</option>
+            <option>Unidad de Venta 4</option>
+            <option>Unidad de Venta 5</option>
+        </select>
+    </div>
+    <ol class="breadcrumb">
+        <li class="active">
+            <i class="center"></i> <h3>Lista de Precios Tabla</h3>
+        </li>
+    </ol>
+    <div class="form-group">
+        <label for="name">Valor de la Venta</label>
+        <input type="text" class="form-control" name="nombre" ng-model="formData.nombre">
+    </div>
+
+
+    <ol class="breadcrumb">
+        <li class="active">
+            <i class="center"></i> <h3>Unidades Alternas</h3>
+        </li>
+    </ol>
+    <div class="form-group">
+        <label for="unidadventa">Unidad de Venta Alterna</label>
+        <select id="unidadalterna" class="charge_select form-control ui-wizard-content" name="unidadalterna" ng-model="formData.unidadalterna">
+            <option>Unidad de Venta Alterna 1</option>
+            <option>Unidad de Venta Alterna 2</option>
+            <option>Unidad de Venta Alterna 3</option>
+            <option>Unidad de Venta Alterna 4</option>
+            <option>Unidad de Venta Alterna 5</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="name">Equivalencia con Kilogramo</label>
+        <input type="text" class="form-control" name="nombre" ng-model="formData.nombre">
+    </div>
+    <ol class="breadcrumb">
+        <li class="active">
+            <i class="center"></i> <h3>Lista de Precios Tabla</h3>
+        </li>
+    </ol>
+    <div class="form-group">
+        <label for="name">Valor de la Venta</label>
+        <input type="text" class="form-control" name="nombre" ng-model="formData.nombre">
+    </div>
+
+    <ol class="breadcrumb">
+        <li class="active">
+            <i class="center"></i> <h3>Grupo de Selección</h3>
+        </li>
+    </ol>
+    <ol class="breadcrumb">
+        <li class="active">
+            <i class="center"></i> <h3>Lista de Grupos de Selección Tabla</h3>
+        </li>
+    </ol>
+</div>

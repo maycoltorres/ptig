@@ -1,0 +1,42 @@
+
+<div id="page-wrapper">
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    Clientes <small>Resumen de Estadísticas</small>
+                </h1>
+
+            </div>
+        </div>
+
+
+
+        <ol class="breadcrumb">
+            <li class="active">
+                <i class="fa fa-user"></i> Crear Nuevo Cliente 
+            </li>
+        </ol>
+
+
+
+        <div id="status-buttons">
+            <a ui-sref-active="active" ui-sref=".datosbasicos"><span>1</span> Datos Básicos</a>
+            <a ui-sref-active="active" ui-sref=".ajustescliente"><span>2</span> Ajustes y Conf. Régimen</a>
+            <a ui-sref-active="active" ui-sref=".canalesimp"><span>3</span> Canales e Impuestos</a>
+        </div>
+
+
+        <!-- use ng-submit to catch the form submission and use our Angular function -->
+        <form id="signup-form" ng-submit="processFormCliente()">
+            <!-- our nested state views will be injected here -->
+            <div id="form-views" ui-view></div>
+        </form>
+
+    </div>
+
+</div>	
+
+
+

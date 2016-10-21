@@ -1,0 +1,108 @@
+
+
+<div class="container-fluid">
+    <ol class="breadcrumb">
+        <li class="active">
+            <i class="center"></i> <h3>Inventario</h3>
+        </li>
+    </ol>
+
+    <div class="form-group">
+        <label for="email">Clase de Inventario</label>
+        <select class="charge_select form-control ui-wizard-content" name="claseinventario" ng-model="formData.claseinventario">
+            <option>Clase Inventario 1</option>
+            <option>Clase Inventario 2</option>
+            <option>Clase Inventario 3</option>
+            <option>Clase Inventario 4</option>
+            <option>Clase Inventario5</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="email">Grupo de Inventario</label>
+        <select class="charge_select form-control ui-wizard-content" name="grupoinventario" ng-model="formData.grupoinventario">
+            <option>Grupo Inventario 1</option>
+            <option>Grupo Inventario 2</option>
+            <option>Grupo Inventario 3</option>
+            <option>Grupo Inventario 4</option>
+            <option>Grupo Inventario5</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="email">Unidad de Kardex</label>
+        <select class="charge_select form-control ui-wizard-content" name="unidadkardex" ng-model="formData.unidadkardex">
+            <option>Unidad de Kardex 1</option>
+            <option>Unidad de Kardex 2</option>
+            <option>Unidad de Kardex 3</option>
+            <option>Unidad de Kardex 4</option>
+            <option>Unidad de Kardex 5</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="email">Unidad Alterna</label>
+        <select class="charge_select form-control ui-wizard-content" name="unidadalterna" ng-model="formData.unidadalterna">
+            <option>Unidad Alterna 1</option>
+            <option>Unidad Alterna 2</option>
+            <option>Unidad Alterna 3</option>
+            <option>Unidad Alterna 4</option>
+            <option>Unidad Alterna 5</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        Usar Máximos y Mínimos
+        <label>
+            <input type="checkbox" ng-model="formData.maxmin" value="check1">        
+        </label>
+        Al ser clickeado este check mostar maximos y minimos
+    </div>
+
+    <ol class="breadcrumb">
+        <li class="active">
+            <i class=""></i> <h3>Unidad de Compra</h3>
+        </li>
+    </ol>
+    <div class="form-group">
+        <label for="email">Unidad de Compra</label>
+        <select class="charge_select form-control ui-wizard-content" name="unidadcompra" ng-model="formData.unidadcompra">
+            <option>Unidad de Compra 1</option>
+            <option>Unidad de Compra 2</option>
+            <option>Unidad de Compra 3</option>
+            <option>Unidad de Compra 4</option>
+            <option>Unidad de Compra 5</option>
+        </select>
+    </div>
+
+    <ol class="breadcrumb">
+        <li class="active">
+            <i class=""></i> <h3>Bodegas</h3>
+        </li>
+    </ol>
+    <div class="form-group">
+        <label for="email">Bodegas</label>
+        <select class="charge_select form-control ui-wizard-content" name="bodegas" ng-model="formData.bodegas">
+            <option>Bodegas 1</option>
+            <option>Bodegas 2</option>
+            <option>Bodegas 3</option>
+            <option>Bodegas 4</option>
+            <option>Bodegas 5</option>
+        </select>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-xs-3">
+            <a ui-sref="creararticulo.datosbasicosarticulo" class="btn btn-block btn-warning">
+                Atras <span class="glyphicon glyphicon-circle-arrow-left"></span>
+            </a>
+        </div>
+
+        <div class="col-xs-3">
+            <a ui-sref="creararticulo.ventaarticulo" class="btn btn-block btn-info">
+                Siguiente <span class="glyphicon glyphicon-circle-arrow-right"></span>
+            </a>
+        </div>
+    </div>
+</div>
+
+

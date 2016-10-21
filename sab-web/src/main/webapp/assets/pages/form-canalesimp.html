@@ -1,0 +1,83 @@
+
+
+
+<div class="container-fluid">
+
+    <ol class="breadcrumb">
+        <li class="active">
+            <i class="center"></i> <h3>Asignar Canales al Cliente</h3>
+        </li>
+    </ol>
+    <div class="form-group">
+        <label>
+            <input type="checkbox" name="autoservicio" ng-model="formData.autoservicio" value="autoservicio">
+        </label>
+        AutoServicio
+    </div>
+    <div class="form-group">
+        <label>
+            <input type="checkbox" name="llevar" ng-model="formData.llevar" value="llevar">
+        </label>
+        Para Llevar
+    </div>
+    <div class="form-group">
+        <label>
+            <input type="checkbox" name="domicilio" ng-model="formData.domicilio" value="domicilio">
+        </label>
+        Domicilio
+    </div> 
+    <ol class="breadcrumb">
+        <li class="active">
+            <i class="center"></i> <h3>Seleccione el Impuesto para el Canal</h3>
+        </li>
+    </ol>
+
+    <div class="form-group">
+        <label for="canal">Canal</label>
+        <select class="charge_select form-control ui-wizard-content" name="canal" ng-model="formData.canal">
+            <option>Canal 1</option>
+            <option>Canal 2</option>
+            <option>Canal 3</option>
+            <option>Canal 4</option>
+            <option>Canal 5</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="impuesto">Impuesto</label>
+        <select class="charge_select form-control ui-wizard-content" name="impuesto" ng-model="formData.impuesto">
+            <option>Impuesto 1</option>
+            <option>Impuesto 2</option>
+            <option>Impuesto 3</option>
+            <option>Impuesto 4</option>
+            <option>Impuesto 5</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>
+            <input type="checkbox" name="impuestomasusado" ng-model="formData.impuestomasusado" value="impuestomasusado">
+        </label>
+        Este es el Impuesto mas Usado
+    </div>
+    <div class="form-group">
+        <label>
+            <input type="checkbox" name="tarifaporcanal" ng-model="formData.tarifaporcanal" value="tarifaporcanal">
+        </label>
+        Maneja Unica tarifa por Canal
+    </div>
+
+    <div class="form-group row">
+
+        <div class="col-xs-3">
+            <a ui-sref="crearclientes.ajustescliente" class="btn btn-block btn-warning">
+                Atras <span class="glyphicon glyphicon-circle-arrow-left"></span>
+            </a>
+        </div>
+        <div class="col-xs-3">
+            <button type="submit" class="btn btn-block btn-success">Guardar Cliente</button>
+        </div>
+    </div>
+</div>
+
+
+
+

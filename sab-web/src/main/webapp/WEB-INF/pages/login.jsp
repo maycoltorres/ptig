@@ -11,37 +11,37 @@
         <meta name="application-name" content="SAB" />
 
         <!-- Core stylesheets do not remove -->
-        <link href="<c:url value='assets/template/css/bootstrap/bootstrap.css'/>" rel="stylesheet" />
-        <link href="<c:url value='assets/template/css/bootstrap/bootstrap-theme.css'/>" rel="stylesheet" />
-        <link href="<c:url value='assets/template/css/icons.css'/>" rel="stylesheet" />
+        <link href="<c:url value='assets/css/bootstrap.css'/>" rel="stylesheet" />
+        <link href="<c:url value='assets/css/bootstrap-theme.css'/>" rel="stylesheet" />
+        <link href="<c:url value='assets/css/icons.css'/>" rel="stylesheet" />
 
         <!-- app stylesheets -->
-        <link href="<c:url value='assets/template/css/app.css'/>" rel="stylesheet" />
+        <link href="<c:url value='assets/css/app.css'/>" rel="stylesheet" />
 
         <!--[if IE 8]>
-        <link href="<c:url value='assets/template/css/ie8.css'/>" rel="stylesheet" type="text/css" />
+        <link href="<c:url value='assets/css/ie8.css'/>" rel="stylesheet" type="text/css" />
         <![endif]-->
 
         <!-- Custom stylesheets ( Put your own changes here ) -->
-        <link href="<c:url value='assets/template/css/custom.css'/>" rel="stylesheet" />
+        <link href="<c:url value='assets/css/custom.css'/>" rel="stylesheet" />
 
         <!-- Force IE9 to render in normal mode -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]>
-        <script src="<c:url value='assets/template/js/respond.min.js'/>"></script>
+        <script src="<c:url value='assets/js/respond.min.js'/>"></script>
         <![endif]-->
 
         <!-- Fav and touch icons -->
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<c:url value='assets/template/images/ico/apple-touch-icon-144-precomposed.png'/>">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<c:url value='assets/template/images/ico/apple-touch-icon-114-precomposed.png'/>">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<c:url value='assets/template/images/ico/apple-touch-icon-72-precomposed.png'/>">
-        <link rel="apple-touch-icon-precomposed" href="<c:url value='assets/template/images/ico/apple-touch-icon-57-precomposed.png'/>">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<c:url value='assets/images/ico/apple-touch-icon-144-precomposed.png'/>">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<c:url value='assets/images/ico/apple-touch-icon-114-precomposed.png'/>">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<c:url value='assets/images/ico/apple-touch-icon-72-precomposed.png'/>">
+        <link rel="apple-touch-icon-precomposed" href="<c:url value='assets/images/ico/apple-touch-icon-57-precomposed.png'/>">
         <link rel="shortcut icon" href="<c:url value='assets/images/ico/favicon.ico'/>">
 
 
         <link rel="stylesheet" href="<c:url value='assets/css/login.css'/>">
-        <link rel="stylesheet" href="<c:url value='assets/js/v_de_validacion/v_de_validacion.css'/>">
+        <link rel="stylesheet" href="<c:url value='assets/css/v_de_validacion.css'/>">
     </head>
 
     <body>
@@ -103,16 +103,16 @@
             <!-- Le javascript
        ================================================== -->
             <!-- Important plugins put in all pages -->
-            <script src="<c:url value='assets/js/libs/jquery.js'/>"></script>
-            <script src="<c:url value='assets/template/js/bootstrap/bootstrap.js'/>"></script>
-            <script src="<c:url value='assets/template/js/conditionizr.min.js'/>"></script>
-            <script src="<c:url value='assets/template/js/plugins/core/jrespond/jRespond.min.js'/>"></script>
+            <script src="<c:url value='assets/js/jquery.js'/>"></script>
+            <script src="<c:url value='assets/js/bootstrap.js'/>"></script>
+            <script src="<c:url value='assets/js/conditionizr.min.js'/>"></script>
+            <script src="<c:url value='assets/js/jRespond.min.js'/>"></script>
 
             <!-- Init plugins -->
-            <script src="<c:url value='assets/template/js/pages/domready.js'/>"></script><!-- Init plugins only for page -->
+            <script src="<c:url value='assets/js/domready.js'/>"></script><!-- Init plugins only for page -->
 
-            <script src="<c:url value='assets/js/v_de_validacion/v_de_validacion.js'/>"></script>
-            <script src="<c:url value='assets/js/login/ready.js'/>"></script>
+            <script src="<c:url value='assets/js/v_de_validacion.js'/>"></script>
+            <script src="<c:url value='assets/js/ready.js'/>"></script>
         </div>
     </body>
 </html>

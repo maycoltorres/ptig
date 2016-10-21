@@ -1,0 +1,226 @@
+
+<div id="page-wrapper">
+
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    Puntos <small>Resumen de Estadísticas</small>
+                </h1>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="panel panel-green">
+                    <a href="#/clientes">
+                        <div class="panel-footer">
+                            <span class="pull-left">Listado de Puntos Activos</span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="panel panel-red">                         
+                    <a href="#/listaclientesinactivos">
+                        <div class="panel-footer">
+                            <span class="pull-left">Listado de Puntos Inactivos</span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <ol class="breadcrumb">
+            <li class="active">
+                <i class="fa fa-user"></i> Crear Nuevo Punto 
+            </li>
+        </ol>
+
+        <ol class="breadcrumb">
+            <li class="active">
+                <i class="center"></i> <h3>Información del Punto</h3>
+            </li>
+        </ol>
+
+        <div class="row">
+
+            <form class="form-horizontal">
+
+                <div class="form-group">
+
+                    <label for="input" class="control-label col-lg-2 col-md-4">Nombre de Punto:</label>
+                    <div class="col-lg-10 col-md-8">
+                        <input type="text" class="form-control" placeholder="Nombre del Punto">
+                    </div>
+                    <label for="input" class="control-label col-lg-2 col-md-4">Dirección:</label>
+                    <div class="col-lg-10 col-md-8">
+                        <input type="text" class="form-control" placeholder="Dirección">
+
+                    </div>
+
+                    <label for="input" class="control-label col-lg-2 col-md-4">Teléfono 1:</label>
+                    <div class="col-lg-10 col-md-8">
+                        <input type="text" class="form-control" placeholder="Teléfono 1">
+                    </div>
+                    <label for="input" class="control-label col-lg-2 col-md-4">Extensión:</label>
+                    <div class="col-lg-10 col-md-8">
+                        <input type="text" class="form-control" placeholder="Extensión">
+                    </div>
+
+                    <label for="input" class="control-label col-lg-2 col-md-4">Teléfono 2:</label>
+                    <div class="col-lg-10 col-md-8">
+                        <input type="text" class="form-control" placeholder="Teléfono 2">
+                    </div>
+                    <label for="input" class="control-label col-lg-2 col-md-4">Extensión:</label>
+                    <div class="col-lg-10 col-md-8">
+                        <input type="text" class="form-control" placeholder="Extensión">
+                    </div>
+
+                    <label for="input" class="control-label col-lg-2 col-md-4">Centro de Costos:</label>
+                    <div class="col-lg-10 col-md-8">
+                        <input type="text" class="form-control" placeholder="Centro de Costos">
+                    </div>
+                    <label for="input" class="control-label col-lg-2 col-md-4">Tipo de Negocio:</label>
+                    <div class="col-lg-10 col-md-8">
+                        <input type="text" class="form-control" placeholder="Tipo de Negocio">
+                    </div>
+
+                    <label for="input" class="control-label col-lg-2 col-md-4">País:</label>
+                    <div class="col-lg-10 col-md-8">
+                        <input type="text" class="form-control" placeholder="País">
+                    </div>
+                    <label for="input" class="control-label col-lg-2 col-md-4">Departamento:</label>
+                    <div class="col-lg-10 col-md-8">
+                        <input type="text" class="form-control" placeholder="Departamento">
+                    </div>
+
+                    <label for="input" class="control-label col-lg-2 col-md-4">Municipio:</label>
+                    <div class="col-lg-10 col-md-8">
+                        <input type="text" class="form-control" placeholder="Municipio">
+                    </div>
+
+                </div>
+        </div>	
+
+        <div class="col-lg-6 col-md-6">
+            <div class="panel panel-primary">
+                <a href="" ng-click="showme = true">
+                    <div class="panel-footer">
+                        <span class="pull-left">Mostrar Configuración del Punto</span>
+                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6">
+            <div class="panel panel-yellow">                         
+                <a href="" ng-click="showme = false">
+                    <div class="panel-footer">
+                        <span class="pull-left">Ocultar Configuración del Punto</span>
+                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="form-group">
+
+            <p ng-hide="showme"></p>
+
+            <div class="form-group" ng-show="showme">
+                <ol class="breadcrumb">
+                    <li class="active">
+                        <i class="center"></i> <h3>Configuración del Punto</h3>
+                    </li>
+                </ol>
+                <label for="input" class="control-label col-xs-3">Configuración 1:</label>
+                <div class="col-xs-3">
+                    <input type="checkbox" class="form-control align-left">
+                </div>
+                <label for="input" class="control-label col-xs-3">Configuración 2:</label>
+                <div class="col-xs-3">
+                    <input type="checkbox" class="form-control">
+                </div>
+                <label for="input" class="control-label col-xs-3">Configuración 3:</label>
+                <div class="col-xs-3">
+                    <input type="checkbox" class="form-control" >
+                </div>
+                <label for="input" class="control-label col-xs-3">Configuración 4:</label>
+                <div class="col-xs-3">
+                    <input type="checkbox" class="form-control" >
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-6 col-md-6">
+            <div class="panel panel-primary">
+                <a href="" ng-click="showme1 = true">
+                    <div class="panel-footer">
+                        <span class="pull-left">Mostrar Configuración de Marcas y Bodegas</span>
+                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6">
+            <div class="panel panel-yellow">                         
+                <a href="" ng-click="showme1 = false">
+                    <div class="panel-footer">
+                        <span class="pull-left">Ocultar Configuración de Marcas y Bodegas</span>
+                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="form-group">
+
+            <p ng-hide="showme"></p>
+
+            <div class="form-group" ng-show="showme1">
+                <ol class="breadcrumb">
+                    <li class="active">
+                        <i class="center"></i> <h3>Configuración deMarcas y Bodegas</h3>
+                    </li>
+                </ol>
+                <label for="input" class="control-label col-xs-3">Configuración de Marca 1:</label>
+                <div class="col-xs-3">
+                    <input type="checkbox" class="form-control align-left">
+                </div>
+                <label for="input" class="control-label col-xs-3">Configuración de Marca 2:</label>
+                <div class="col-xs-3">
+                    <input type="checkbox" class="form-control">
+                </div>
+                <label for="input" class="control-label col-xs-3">Configuración de Bodega 1:</label>
+                <div class="col-xs-3">
+                    <input type="checkbox" class="form-control" >
+                </div>
+                <label for="input" class="control-label col-xs-3">Configuración de Bodega 2:</label>
+                <div class="col-xs-3">
+                    <input type="checkbox" class="form-control" >
+                </div>
+
+            </div>
+
+        </div>
+
+        </form>
+
+    </div>
+
+
+</div>

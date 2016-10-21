@@ -1,0 +1,87 @@
+
+
+<div class="container-fluid">
+
+    <ol class="breadcrumb">
+        <li class="active">
+            <i class="center"></i> <h3>Ajustes del Cliente</h3>
+        </li>
+    </ol>
+    <div class="form-group">
+        <label>
+            <input type="checkbox" name="recetaporpunto" ng-model="formData.recetaporpunto" value="recetaporpunto">        
+        </label>
+        Puede manejar receta diferencial por punto
+    </div>
+    <div class="form-group">
+        <label>
+            <input type="checkbox" name="recetaporcanal" ng-model="formData.recetaporcanal" value="recetaporcanal">
+        </label>
+        Puede manejar receta diferencial por canal
+    </div>
+    <div class="form-group">
+        <label>
+            <input type="checkbox" name="empaqueporpunto" ng-model="formData.empaqueporpunto" value="empaqueporpunto">
+        </label>
+        Puede manejar empaque diferencial por punto
+    </div>
+    <div class="form-group">
+        <label>
+            <input type="checkbox" name="empaqueporcanal" ng-model="formData.empaqueporcanal" value="empaqueporcanal">
+        </label>
+        Puede manejar empaque diferencial por canal
+    </div>
+    <ol class="breadcrumb">
+        <li class="active">
+            <i class="center"></i> <h3>Configuración de Régimen</h3>
+        </li>
+    </ol>
+
+    <div class="form-group">
+        <label for="pais">País</label>
+        <select class="charge_select form-control ui-wizard-content" name="pais2" ng-model="formData.pais2">
+            <option>Argentina</option>
+            <option>Brazil</option>
+            <option>Colombia</option>
+            <option>Peru</option>
+            <option>Venezuela</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="impuesto">Impuesto</label>
+        <select class="charge_select form-control ui-wizard-content" name="impuesto" ng-model="formData.impuesto">
+            <option>10</option>
+            <option>20</option>
+            <option>30</option>
+            <option>40</option>
+            <option>50</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="regimen">Régimen</label>
+        <select class="charge_select form-control ui-wizard-content" name="regimen" ng-model="formData.regimen">
+            <option>10</option>
+            <option>20</option>
+            <option>30</option>
+            <option>40</option>
+            <option>50</option>
+        </select>
+    </div>
+
+    <div class="form-group row">
+
+        <div class="col-xs-3">
+            <a ui-sref="crearclientes.datosbasicos" class="btn btn-block btn-warning">
+                Atras <span class="glyphicon glyphicon-circle-arrow-left"></span>
+            </a>
+        </div>
+        <div class="col-xs-3">
+            <a ui-sref="crearclientes.canalesimp" class="btn btn-block btn-info">
+                Siguiente <span class="glyphicon glyphicon-circle-arrow-right"></span>
+            </a>
+        </div>
+    </div>
+</div>
+

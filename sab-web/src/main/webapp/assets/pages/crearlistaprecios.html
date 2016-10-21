@@ -1,0 +1,91 @@
+
+
+
+
+
+
+<div id="page-wrapper">
+
+    <div class="container-fluid">
+
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    Listado de Precios <small>Resumen de Estadísticas</small>
+                </h1>
+
+            </div>
+        
+
+
+       
+            <div class="col-lg-3 col-md-6">
+                <div class="panel panel-green">
+                    <a href="#/listaprecios">
+                        <div class="panel-footer">
+                            <span class="pull-left">Listado de Precios Activos</span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="panel panel-red">                         
+                    <a href="#/listapreciosinactivos">
+                        <div class="panel-footer">
+                            <span class="pull-left">Listado de Precios Inactivos</span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+    </div>
+        <!-- /.row -->
+<div class="row">
+        <ol class="breadcrumb">
+            <li class="active">
+                <i class="fa fa-user"></i> Crear Nueva Lista de Precios 
+            </li>
+        </ol>
+
+        <ol class="breadcrumb">
+            <li class="active">
+                <i class="center"></i> <h3>Información de la Lista de Precios</h3>
+            </li>
+        </ol>
+
+      
+
+    <form ng-submit="processFormListaPrecios()">
+
+                <div class="form-group">
+
+                    <label for="nombre" class="control-label col-lg-2">Nombre de la Lista de Precios:</label>
+                    <div class="col-lg-10">
+                        <input type="text" name="nombre" class="form-control" ng-model="formData.nombre" placeholder="Nombre">
+                        <input type="hidden" name="id"  ng-model="formData.id" ng-init="formData.id=1">
+                    </div>
+
+                </div>
+       
+
+        <br>
+        <div class="col-xs-3">
+
+            <button type="submit" class="btn btn-block btn-success">Guardar Lista de Precios</button>
+        </div>
+        </form>
+
+  
+</div>
+
+
+</div>
+</div>
+
+
+

@@ -1,0 +1,44 @@
+
+<div id="page-wrapper">
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    Articulos <small>Resumen de Estadísticas</small>
+                </h1>
+
+            </div>
+        </div>
+
+
+
+        <ol class="breadcrumb">
+            <li class="active">
+                <i class="fa fa-user"></i> Crear Nuevo Articulo 
+            </li>
+        </ol>
+
+
+
+        <div id="status-buttons">
+            <a ui-sref-active="active" ui-sref=".datosbasicosarticulo"><span>1</span>Información</a>
+            <a ui-sref-active="active" ui-sref=".inventarioarticulo"><span>2</span>Inventario</a>
+            <a ui-sref-active="active" ui-sref=".ventaarticulo"><span>3</span>Venta</a>
+            <a ui-sref-active="active" ui-sref=".recetaarticulo"><span>4</span>Rceceta</a>
+            <a ui-sref-active="active" ui-sref=".empaquearticulo"><span>5</span>Empaques</a>
+        </div>
+
+
+        <!-- use ng-submit to catch the form submission and use our Angular function -->
+        <form id="signup-form" ng-submit="processFormUsuario()">
+            <!-- our nested state views will be injected here -->
+            <div id="form-views" ui-view></div>
+        </form>
+
+    </div>
+
+</div>	
+
+
+
