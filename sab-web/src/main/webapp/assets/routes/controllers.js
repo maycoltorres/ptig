@@ -34,9 +34,9 @@ angularRoutingApp.controller('Controller', function($scope, ModalService, $http)
 });
 
 angularRoutingApp.controller('ModalController', function($scope, close, $http) {
-  
+  console.log("Valor de la ruta para mostrar datos en la modal");
     $scope.posts = [];
-    $http.get("./rest/cliente/")
+    $http.get('./rest/articulo/?mostrar=activos/')
             .success(function (data) {
 
                 console.log(data);
@@ -557,7 +557,7 @@ angularRoutingApp.controller('crearclasesController', function ($scope,$http) {
        console.log("enviando datos ");
     console.log($scope.formData);
 
-    $http.post("./rest/cliente/clase",$scope.formData)
+    $http.post("./rest/cliente/clase/",$scope.formData)
             .success(function (data){
               console.log("envio los datos");  
             }).error(function(data){

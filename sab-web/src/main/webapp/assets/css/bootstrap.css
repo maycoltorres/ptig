@@ -5901,6 +5901,7 @@ button.close {
   position: relative;
   width: auto;
   margin: 10px;
+  
 }
 .modal-content {
   position: relative;
@@ -5981,9 +5982,9 @@ button.close {
     width: 300px;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1080px) {
   .modal-lg {
-    width: 900px;
+    width: 1080px;
   }
 }
 .tooltip {

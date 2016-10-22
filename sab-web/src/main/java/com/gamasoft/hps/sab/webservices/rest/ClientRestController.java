@@ -78,9 +78,10 @@ public class ClientRestController {
 			if (serviceManager.getClienteService()
 					.getByName(client.getNombre()) != null) {
 				return "El cliente ya existe en la base de datos";
-			} else {
+			} else { 
 				//response.setStatus(HttpStatus.OK.value());
 				return serviceManager.getClienteService().add(client);
+                                
 			}
 		} else {
 			return "El Nit existe en la base de datos";

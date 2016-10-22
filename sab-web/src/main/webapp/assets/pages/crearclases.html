@@ -64,9 +64,9 @@
 
                 <div class="form-group">
 
-                    <label for="input" class="control-label col-lg-2">Nombre de la Clase:</label>
+                    <label for="nombre" class="control-label col-lg-2">Nombre de la Clase:</label>
                     <div class="col-lg-10">
-                        <input type="text" class="form-control" ng-model="formData.nombreclase" placeholder="Nombre">
+                        <input type="text" class="form-control" ng-model="formData.nombre" placeholder="Nombre">
                     </div>
 
                 </div>
@@ -89,11 +89,11 @@
                                 <tbody>
                                     <tr class="odd gradeX">
                                         <td>Usada para la Venta</td>
-                                        <td><input type="checkbox" name="unidadventa" value="unidadventa" ng-model="formData.unidadventa"></td>
+                                        <td><input type="checkbox" name="unidadventa" value="unidadventa" ng-model="formData.venta"></td>
                                     </tr>
                                     <tr class="odd gradeX">
                                         <td>Usada para Inventario</td>
-                                        <td><input type="checkbox" name="usadainventario" value="usadainventario" ng-model="formData.usadainventario" ></td>
+                                        <td><input type="checkbox" name="usadainventario" value="usadainventario" ng-model="formData.inventario" ></td>
                                     </tr>
 
                                 </tbody>
@@ -112,7 +112,7 @@
                     </ol>			
                     <label for="nombregrupo" class="control-label col-lg-2">Nombre del Grupo:</label>
                     <div class="col-lg-10">
-                        <input type="text" class="form-control" name="nombregrupo" ng-model="formData.nombregrupo" placeholder="Nombre">
+                        <input type="text" class="form-control" name="nombregrupo" ng-model="formData.grupos" placeholder="Nombre">
                     </div>
             
 

@@ -248,7 +248,7 @@ angularRoutingApp.config(function ($stateProvider, $urlRouterProvider) {
             .state('/creargruposdeseleccion', {
                 url: '/creargruposdeseleccion',
                 templateUrl: 'assets/pages/creargruposdeseleccion.html',
-                controller: 'creargruposdeseleccionController'
+                controller: 'articulosController'
             })
 
             .state('/buscarseleccion/:nombre', {
